@@ -1,0 +1,221 @@
+:root {
+  /* color */
+  --white-color: #fff;
+  --black-color: #140a00;
+  --blue-color: #045fd4;
+  --red-color: #ff0000;
+  --grey-dark-color: #909090;
+  --grey-light-color: #e0e0e0;
+
+  /* Size */
+  --pading: 12px;
+  --avatar-size: 36px;
+  /* Font Size */
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: roboto;
+  background-color: var(--white-color);
+}
+ul {
+  list-style: none;
+}
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+/* header */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black-color);
+  padding: var(--pading);
+}
+a {
+  text-decoration: none;
+}
+.logo {
+  font-size: var(--font-large);
+  align-items: center;
+}
+.logo i {
+  color: var(--red-color);
+}
+.logo a {
+  color: var(--white-color);
+}
+.icon {
+  color: var(--white-color);
+}
+.icon .fa-search {
+  padding: var(--pading);
+}
+/* video player */
+.player {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: var(--black-color);
+}
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/* Video info */
+.InfoUpNext > .info {
+  padding: var(--pading);
+}
+.info .metadata .hash {
+  display: flex;
+  font-size: var(--font-small);
+  color: var(--blue-color);
+}
+.info .metadata .hash li {
+  margin-right: var(--pading);
+}
+.info .metadata .titleAndButton {
+  display: flex;
+  justify-content: space-between;
+}
+.info .metadata .titleAndButton .title {
+  font-size: var(--font-large);
+  color: var(--black-color);
+}
+.info .metadata .titleAndButton .Btn {
+  background-color: var(--white-color);
+  height: 100%;
+}
+.metadata .views {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.info .actions {
+  display: flex;
+  justify-content: space-around;
+  margin: var(--pading);
+}
+.info .actions button {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  font-size: var(--font-small);
+  align-items: center;
+  color: var(--grey-dark-color);
+}
+.actions button i {
+  margin-bottom: calc(var(--pading) / 2);
+  font-size: 16px;
+}
+.actions button i.active {
+  color: var(--blue-color);
+}
+
+/* chnnel */
+.chnnel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: var(--grey-light-color) 1px solid;
+  border-bottom: var(--grey-light-color) 1px solid;
+}
+.chnnel .profile {
+  display: flex;
+  align-items: center;
+}
+
+.chnnel .profile img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+.chnnel .profile .info {
+  display: flex;
+  flex-direction: column;
+  margin: var(--pading);
+}
+.chnnel .profile .info .name {
+  font-size: var(--font-medium);
+}
+.chnnel .profile .info .sub {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+.chnnel button {
+  color: var(--red-color);
+  font-size: var(--font-medium);
+  background-color: var(--white-color);
+}
+
+/* Up Next */
+.UpNext {
+  padding: 0 var(--pading);
+}
+.UpNext .upnext {
+  font-size: var(--font-medium);
+  color: var(--grey-dark-color);
+  margin-bottom: var(--pading);
+}
+.UpNext .item {
+  display: flex;
+  margin-top: var(--pading);
+}
+.UpNext .item .img {
+  flex: 1 1 35%;
+  margin-right: var(--pading);
+}
+.UpNext .item .img img {
+  width: 100%;
+  border-radius: 5%;
+}
+.UpNext .item .info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+.UpNext .item .moreBtn {
+  flex: 1 1 5%;
+  background-color: var(--white-color);
+  display: flex;
+  margin-top: var(--pading);
+}
+.UpNext .item .info {
+  align-items: flex-start;
+}
+.UpNext .item .info .title {
+  font-size: var(--font-medium);
+}
+.UpNext .item .info .name,
+.UpNext .item .info .viewr {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.InfoUpNext {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+  .InfoUpNext {
+    flex-direction: row;
+    margin: var(--pading) 0;
+  }
+  .InfoUpNext .info {
+    flex: 1 1 50%;
+  }
+  .InfoUpNext .UpNext {
+    flex: 1 1 50%;
+  }
+}
