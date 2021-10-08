@@ -191,6 +191,7 @@ a {
 .chnnel .time {
   color: var(--blue-color);
 }
+
 .chnnel .more {
   display: flex;
   justify-content: flex-start;
@@ -201,10 +202,20 @@ a {
   padding: 0;
   margin-bottom: var(--pading);
 }
+
+.chnnel .mun2 {
+  display: none;
+}
 .timeline.active {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+.mun.active {
+  display: none;
+}
+.mun2.active {
+  display: block;
 }
 /* Up Next */
 .UpNext {
