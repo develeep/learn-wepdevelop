@@ -73,7 +73,6 @@ a {
   height: 100%;
   max-width: 1000px;
 }
-
 /* Video info */
 .InfoUpNext > .info {
   padding: var(--pading);
@@ -84,7 +83,7 @@ a {
   color: var(--blue-color);
 }
 .info .metadata .hash li {
-  margin-right: var(--pading);
+  margin-right: calc(var(--pading) / 2);
 }
 .info .metadata .titleAndButton {
   display: flex;
@@ -98,44 +97,58 @@ a {
   background-color: var(--white-color);
   height: 100%;
 }
+.metadata .videoInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .metadata .views {
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   color: var(--grey-dark-color);
 }
-.info .actions {
+.videoInfo .actions {
   display: flex;
   justify-content: space-around;
   margin: var(--pading);
 }
-.info .actions button {
+.videoInfo .actions button {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: var(--white-color);
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   align-items: center;
   color: var(--grey-dark-color);
+  margin-right: calc(var(--pading) / 2);
 }
-.actions button i {
-  margin-bottom: calc(var(--pading) / 2);
+.videoInfo .actions button i {
+  padding: calc(var(--pading) / 2);
   font-size: 16px;
 }
-.actions button i.active {
+.videoInfo .actions button i.active {
   color: var(--blue-color);
 }
 
 /* chnnel */
 .chnnel {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   border-top: var(--grey-light-color) 1px solid;
   border-bottom: var(--grey-light-color) 1px solid;
+  margin-bottom: var(--pading);
+  padding-top: var(--pading);
 }
 .chnnel .profile {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
+.chnnel .profileinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
 .chnnel .profile img {
   width: var(--avatar-size);
   height: var(--avatar-size);
@@ -154,11 +167,45 @@ a {
   color: var(--grey-dark-color);
 }
 .chnnel button {
-  color: var(--red-color);
+  color: var(--grey-dark-color);
   font-size: var(--font-medium);
-  background-color: var(--white-color);
+  background-color: var(--grey-light-color);
+  padding: 8px 14px;
 }
-
+.chnnel .info {
+  display: flex;
+  flex-direction: column;
+  margin-left: calc(var(--pading) * 4);
+  font-size: var(--font-medium);
+  border-radius: 20%;
+  margin-top: var(--pading);
+}
+.chnnel .hash {
+  color: var(--blue-color);
+  margin-bottom: var(--pading);
+}
+.chnnel .timeline {
+  margin-bottom: 2px;
+  display: none;
+}
+.chnnel .time {
+  color: var(--blue-color);
+}
+.chnnel .more {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: calc(var(--pading) * 4);
+  margin-top: calc(var(--pading) * 2);
+  color: var(dar);
+  background-color: var(--white-color);
+  padding: 0;
+  margin-bottom: var(--pading);
+}
+.timeline.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 /* Up Next */
 .UpNext {
   padding: 0 var(--pading);
@@ -207,15 +254,16 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 800px) {
+
+@media screen and (min-width: 900px) {
   .InfoUpNext {
     flex-direction: row;
     margin: var(--pading) 0;
   }
   .InfoUpNext .info {
-    flex: 1 1 50%;
+    flex: 1 1 70%;
   }
   .InfoUpNext .UpNext {
-    flex: 1 1 50%;
+    flex: 1 1 30%;
   }
 }
