@@ -24,7 +24,13 @@ body {
   font: inherits;
   background-color: var(--color-dark-white);
 }
-
+button,
+button:focus {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: var(--color-dark-white);
+}
 /* header */
 .header {
   display: flex;
@@ -130,6 +136,9 @@ ul {
 }
 
 /* feed */
+.body .main .Feeds {
+  background-color: var(--color-white);
+}
 .body .main .Feeds .Feed .profile {
   display: flex;
   width: 600px;
