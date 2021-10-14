@@ -25,6 +25,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   background-color: var(--color-dark-white);
+  padding: 0;
+  margin: 0;
 }
 button,
 button:focus {
@@ -37,21 +39,29 @@ button:focus {
 /* header */
 .header {
   display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-bottom: 1px solid var(--color-light-gray);
+  background-color: var(--color-white);
+}
+.head {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-white);
+
   padding: 12px 20px;
-  border-bottom: 1px solid var(--color-light-gray);
 }
-.header .logo {
+.head .logo {
   flex: 0 0 25%;
   align-items: center;
   display: flex;
 }
-.header .search_var {
+.head .search_var {
   display: none;
 }
-.header .search {
+.head .search {
   flex: 0 0 50%;
   align-items: center;
   max-width: 200px;
@@ -61,7 +71,7 @@ button:focus {
   border-radius: 5%;
   /* flex: 0 1 50%; */
 }
-.header .search .search_q {
+.head .search .search_q {
   display: flex;
   font-size: var(--text-medium);
   color: var(--color-dark-gray);
@@ -69,10 +79,10 @@ button:focus {
   padding: 3px;
   align-items: center;
 }
-.header .search .serch_text {
+.head .search .serch_text {
   margin-left: 3px;
 }
-.header .icon {
+.head .icon {
   flex: 0 0 25%;
   display: flex;
   justify-content: flex-end;
@@ -80,16 +90,22 @@ button:focus {
   font-size: 20px;
   margin-left: 24px;
 }
-.header .icon i {
+.head .icon i {
   margin-left: 20px;
 }
-.header .icon img {
+.head .icon img {
   width: var(--profile-size);
   border-radius: 50%;
   margin-left: 20px;
 }
 /* main */
+.bodys {
+  display: flex;
+  justify-content: center;
+}
 .body {
+  max-width: 1100px;
+  width: 100%;
   padding-top: 30px;
 }
 .main {
