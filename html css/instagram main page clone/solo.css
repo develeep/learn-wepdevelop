@@ -5,6 +5,7 @@
   --color-black: #262626;
   --color-dark-gray: #8e8e8e;
   --color-light-gray: #c7c7c7;
+  --color-blue: #0095f6;
 
   /* text size */
   --text-large: 18px;
@@ -21,7 +22,8 @@
   box-sizing: border-box;
 }
 body {
-  font: inherits;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
   background-color: var(--color-dark-white);
 }
 button,
@@ -31,6 +33,7 @@ button:focus {
   border: none;
   background-color: var(--color-dark-white);
 }
+
 /* header */
 .header {
   display: flex;
@@ -95,9 +98,7 @@ button:focus {
   flex-direction: column;
   align-items: center;
 }
-ul {
-  list-style: none;
-}
+
 /* story */
 .body .main .story {
   width: 600px;
@@ -138,13 +139,21 @@ ul {
 /* feed */
 .body .main .Feeds {
   background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.body .main .Feed {
+  border: 1px solid var(--color-light-gray);
+  margin-bottom: 24px;
+  width: 600px;
 }
 .body .main .Feeds .Feed .profile {
   display: flex;
-  width: 600px;
+  font-weight: 550;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-light-gray);
 }
 .body .main .Feeds .Feed .profile .pro {
   display: flex;
@@ -172,7 +181,6 @@ ul {
   object-fit: cover;
   margin: auto;
   border-radius: 50%;
-  border: 1px var(--color-dark-gray) solid;
 }
 .body .main .Feeds .Feed .profile i {
   font-size: var(--text-medium);
@@ -180,13 +188,12 @@ ul {
   margin-right: 8px;
   padding: 8px;
 }
-.body .main .Feeds .Feed .image {
+.body .main .Feeds .Feed .main_image {
   width: 600px;
   height: 600px;
   position: relative;
-  border: 1px solid var(--color-light-gray);
 }
-.body .main .Feeds .Feed .image img {
+.body .main .Feeds .Feed .main_image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -195,4 +202,98 @@ ul {
   height: 100%;
   object-fit: cover;
   margin: auto;
+}
+
+.body .main .Feeds .Feed .feed_main {
+  border-bottom: 1px solid var(--color-light-gray);
+}
+.body .main .Feeds .Feed .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6px 16px 8px;
+}
+/* feed_icon */
+.body .main .Feeds .Feed .icon i {
+  padding: 8px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 24px;
+}
+.body .main .Feeds .Feed .icon i:hover {
+  color: var(--color-light-gray);
+}
+.body .main .Feeds .Feed .icon .fa-heart {
+  padding-left: 0px;
+}
+/* feed_main */
+.body .main .Feeds .Feed .feed_main {
+  width: 600px;
+  color: var(--color-black);
+  border-bottom: 1px solid var(--color-light-gray);
+}
+.body .main .Feeds .Feed .feed_main .info {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 16px;
+  font-size: var(--text-medium);
+}
+.body .main .Feeds .Feed .feed_main .info .heart {
+  margin-bottom: 8px;
+  font-weight: 550;
+}
+.body .main .Feeds .Feed .feed_main .info .Feed_comment {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.body .main .Feeds .Feed .feed_main .info .Feed_comment .profile {
+  border: none;
+  padding-right: 5px;
+}
+.body .main .Feeds .Feed .feed_main .info .surv_ment {
+  color: var(--color-dark-gray);
+  margin-bottom: 8px;
+}
+.body .main .Feeds .Feed .time {
+  margin-bottom: 16px;
+  font-size: var(--text-small);
+  color: var(--color-dark-gray);
+}
+/* comment */
+.body .main .Feeds .Feed .comment {
+  padding: 6px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body .main .Feeds .Feed .comment button {
+  background-color: var(--color-white);
+}
+.body .main .Feeds .Feed .comment .imoge {
+  font-size: 24px;
+  padding: 8px 16px 8px 0px;
+  align-items: center;
+  display: flex;
+}
+.body .main .Feeds .Feed .comment .search_var {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.body .main .Feeds .Feed .comment .search_var input {
+  width: 500px;
+  border: none;
+  font-size: var(--text-medium);
+  list-style: none;
+  outline: none;
+}
+.body .main .Feeds .Feed .comment .search_var .input {
+  color: var(--color-blue);
+  font-size: var(--text-small);
 }
