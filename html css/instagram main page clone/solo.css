@@ -367,18 +367,13 @@ button:focus {
 .surv .profile .img {
   width: 55px;
   height: 55px;
-  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .surv .profile .img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(50, 50);
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  margin: auto;
-  border-radius: 50%;
 }
 .surv .profile .trans {
   font-size: var(--text-medium);
